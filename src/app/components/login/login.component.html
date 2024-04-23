@@ -1,0 +1,31 @@
+<nb-layout>
+    <nb-layout-column class="colored-column-warning">
+        <nb-card size="medium" class="card_loc">
+            <nb-card-header style="text-align: center;font-size: 40px; font-family: Arial, sans-serif;" class="card_head" > Login </nb-card-header>
+            <nb-card-body>
+
+
+                
+                <input type="text"  nbInput fullWidth shape="semi-round" placeholder="Email" class="input-gap">
+                
+                <input [type]="getInputType()" nbInput  style="width: 750px; margin-right: 5%;" shape="semi-round" placeholder="Password" class="input-gap"  >
+                    <button nbSuffix nbButton ghost (click)="toggleShowPassword()" class="input-gap" >
+                      <nb-icon [icon]="showPassword ? 'eye-outline' : 'eye-off-2-outline'"
+                               pack="eva"
+                               [attr.aria-label]="showPassword ? 'hide password' : 'show password'" style="margin-top: 100%;   ">
+                      </nb-icon>
+                    </button>
+
+                  
+                  
+            </nb-card-body>
+
+            <nb-card-footer style="text-align: center;"> <input (click)="onClick()" nbButton type="submit" value=" Submit" class="input-gap-btn"/>
+             </nb-card-footer>
+          </nb-card>
+
+
+    </nb-layout-column>
+    <nb-layout-column class="colored-column-info"></nb-layout-column>
+    <nb-layout-column left class="colored-column-success"></nb-layout-column>
+  </nb-layout>
